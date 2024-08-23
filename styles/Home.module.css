@@ -1,92 +1,132 @@
-.container {
-  min-height: 100vh;
-  padding: 0 0.5rem;
+.app{
+  padding: 20px;
+  margin: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.movieList {
+  display: flex;
+  min-height: 70vh;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movieCard {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 13px;
+  border-radius: 3px;
+  height: 230px;
+  width: calc(33% - 20px);
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.movieCard .animation{
+  background: blue;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0 0 1rem;
-  line-height: 1.15;
-  font-size: 3.6rem;
-}
-
-.title {
-  text-align: center;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.grid {
+.btnContainer{
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  width: 100%
+}
+
+.btnContainer2{
+  display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+
+.likeBtn{
+  height: 30px;
+  width: 100px;
+  background-color: black;
+  color: #f4f4f4;
+  transition: 0.5s ease-out;
+
+  font-size: 13px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+.likeBtn:hover{
+  height: 30px;
+  width: 100px;
+  border: 1px solid black;
+  background-color: #f4f4f4;
+  color: black;
+  transition: 0.3s ease-in;
+
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.movieCard .comedy{
+  background: green;
+}
+
+.movieCard .thriller{
+  background: red;
+}
+
+.movieCard .drama{
+  background: purple;
+}
+
+.movieCard h3 {
+  font-weight: bold;
+}
+
+.gauge {
+  display: flex;
+  height: 35px;
+  overflow: hidden;
+}
+
+.movieCard .likes {
+  background: green;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}
+
+.movieCard .dislikes {
+  background: red;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+}
+
+.filter {
+  display: flex;
   flex-wrap: wrap;
-
-  max-width: 800px;
-  margin-top: 3rem;
+  justify-content: space-around;
+  width: 70%;
+  height: 50px;
 }
 
-.card {
-  margin: 1rem;
-  flex-basis: 45%;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition:
-    color 0.15s ease,
-    border-color 0.15s ease;
+.pagination {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+@media (max-width: 768px) {
+  .movieCard {
+    width: calc(50% - 20px);
+  }
 }
 
-.card h3 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-}
-
-@media (max-width: 600px) {
-  .grid {
+@media (max-width: 480px) {
+  .movieCard {
     width: 100%;
-    flex-direction: column;
   }
 }
